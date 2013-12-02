@@ -1,0 +1,54 @@
+.scatterplot {
+    background-color:green;
+}
+
+.filters {
+    background-color:blue;
+    padding: 10px 10px 10px 10px;
+
+}
+
+.filters span {
+    display: block;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.filters-block {
+
+}
+
+.filters-block-part {
+    display: block;
+    padding: 5px 10px 5px 10px;
+}
+
+.filters-block-part select {
+    width: 85%;
+    margin-left:10px;
+}
+
+#reset {
+    margin: 0 auto;
+    width: 100%;
+    height: 30px;
+}
+
+.slider {
+    width: 85%;
+    display: inline-block;
+    margin-left:10px;
+}
+
+.slider-range {
+    width: 85%;
+    display: inline-block;
+    margin-left:10px;
+}
+
+.data {
+    background-color:red;
+}
