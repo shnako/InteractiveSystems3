@@ -1,9 +1,9 @@
 .scatterplot {
-    background-color:green;
+    background-color: green;
 }
 
 .filters {
-    background-color:blue;
+    background-color: blue;
     padding: 10px 10px 10px 10px;
 
 }
@@ -28,7 +28,7 @@
 
 .filters-block-part select {
     width: 85%;
-    margin-left:10px;
+    margin-left: 10px;
 }
 
 #reset {
@@ -40,15 +40,15 @@
 .slider {
     width: 85%;
     display: inline-block;
-    margin-left:10px;
+    margin-left: 10px;
 }
 
 .slider-range {
     width: 85%;
     display: inline-block;
-    margin-left:10px;
+    margin-left: 10px;
 }
 
 .data {
-    background-color:red;
+    background-color: red;
 }

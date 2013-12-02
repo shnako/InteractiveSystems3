@@ -1,112 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <title>Data Visualisation Tool</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>What Career Should I Invest In?</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
 
-	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
-	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
-	<!--script src="js/less-1.3.3.min.js"></script-->
-	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
-	
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-    <link href="css/jquery-ui.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <![endif]-->
-  
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="http://www.rasmussen.edu/css/webfonts_trade_gothic_next.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
-
 <body>
-<div class="container">
-	<div class="row clearfix">
-		<div class="col-md-9 column someclass scatterplot">
-            <p>Scatterplot goes here</p>
-		</div>
-		<div class="col-md-3 column filters">
-            <div class="filters-block">
-                <span>Data</span>
-                <div class="filters-block-part">
-                    <label for="x_axis">X:</label>
-                    <select name="x_axis">
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                    </select>
-                </div>
-                <div class="filters-block-part">
-                    <label for="y_axis">Y:</label>
-                    <select name="y_axis">
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                    </select>
-                </div>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
+    improve your experience.</p>
+<![endif]-->
 
-            </div>
+<div id="container" class="wrapper">
+    <header>
+        <h1 class="ir">What Career Should I Invest In?</h1>
 
-            <div class="filters-block">
-                <span>Scaling</span>
-                <div class="filters-block-part">
-                    <label for="x_scale">X:</label>
-                    <div class="slider" name="x_scale"></div>
-                </div>
-                <div class="filters-block-part">
-                    <label for="y_scale">Y:</label>
-                    <div class="slider" name="y_scale"></div>
-                </div>
-            </div>
+        <h2>Compare the number of people employed and median salary for all major<a href="#major" class="major">*</a>
+            occupations in the United States.</h2>
+    </header>
+    <nav id="select" class="clearfix">
+        <a id="navToggle" href="#"><span>Select the categories you are interested in:</span></a>
 
-            <div class="filters-block">
-                <span>Data ranges</span>
-                <div class="filters-block-part">
-                    <label for="x_scale">X:</label>
-                    <div class="slider-range slider-range-x" name="x_scale"></div>
-                </div>
-                <div class="filters-block-part">
-                    <label for="y_scale">Y:</label>
-                    <div class="slider-range slider-range-y" name="y_scale"></div>
-                </div>
-            </div>
+        <div id="navListContainer">
+            <ul id="navList">
+                <li class="nl"><a href="0">Architecture and Engineering Occupations</a></li>
+                <li class="nl"><a href="1">Arts, Design, Entertainment, Sports, and Media Occupations</a></li>
+                <li class="nl"><a href="2">Building and Grounds Cleaning and Maintenance Occupations</a></li>
+                <li class="nl"><a href="3">Business and Financial Operations Occupations</a></li>
+                <li class="nl"><a href="4">Community and Social Service Occupations</a></li>
+                <li class="nl"><a href="5">Computer and Mathematical Occupations</a></li>
+                <li class="nl"><a href="6">Construction and Extraction Occupations</a></li>
+                <li class="nl"><a href="7">Education, Training, and Library Occupations</a></li>
+                <li class="nl"><a href="8">Farming, Fishing, and Forestry Occupations</a></li>
+                <li class="nl"><a href="9">Food Preparation and Serving Related Occupations</a></li>
+                <li class="nl"><a href="10">Healthcare Practitioners and Technical Occupations</a></li>
+                <li class="nl"><a href="11">Healthcare Support Occupations</a></li>
+                <li class="nl"><a href="12">Installation, Maintenance, and Repair Occupations</a></li>
+                <li class="nl"><a href="13">Legal Occupations</a></li>
+                <li class="nl"><a href="14">Life, Physical, and Social Science Occupations</a></li>
+                <li class="nl"><a href="15">Management Occupations</a></li>
+                <li class="nl"><a href="16">Office and Administrative Support Occupations</a></li>
+                <li class="nl"><a href="17">Personal Care and Service Occupations</a></li>
+                <li class="nl"><a href="18">Production Occupations</a></li>
+                <li class="nl"><a href="19">Protective Service Occupations</a></li>
+                <li class="nl"><a href="20">Sales and Related Occupations</a></li>
+                <li class="nl"><a href="21">Transportation and Material Moving Occupations</a></li>
+            </ul>
+            <div id="navButtons"><a id="resetNav" href="#" title="Reset all category filters">Clear all</a> <a
+                    id="doneNav" href="#" title="Reset all category filters and hide list">Done</a></div>
+        </div>
+    </nav>
+    <aside id="quadrantContainer" class="clearfix">
+        <header id="quadrant" class="annotationsOn hidden"><h5></h5> - <p></p></header>
+    </aside>
+    <div id="chartContainer">
+        <aside id="tooltip" class="hidden">
+            <h3 id="name"></h3>
 
-            <div class="filters-block">
-                <span>Locations</span>
-                <div class="filters-block-part">
-                    <label for="region">Region:</label>
-                    <select name="region" id="region" multiple="multiple">
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                    </select>
-                </div>
-                <div class="filters-block-part">
-                    <label for="country">Country:</label>
-                    <select name="country" id="country" multiple="multiple">
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                    </select>
-                </div>
-            </div>
-            <div class="filters-block">
-                <span>Actions</span>
-                <div class="filters-block-part">
-                    <button type="button" id="reset">RESET</button>
-                </div>
-            </div>
+            <p id="desc"></p>
+            <ul id="stats">
+                <li>
+                    <span class="value" id="medSal"></span>
+                    <span class="key">Median Annual Salary in 2011</span>
+                </li>
+                <li>
+                    <span class="value" id="totEmp"></span>
+                    <span class="key">Total Employment in 2011</span>
+                </li>
+                <li>
+                    <span class="value" id="projGrowth"></span>
+                    <span class="key">Projected Growth by 2020</span>
+                </li>
+                <li>
+                    <span class="value" id="education"></span>
+                    <span class="key">Education Needed</span>
+                </li>
+                <li>
+                    <span class="value" id="experience"></span>
+                    <span class="key">Work Experience Needed</span>
+                </li>
+            </ul>
+        </aside>
+        <nav id="zoom">
+            <a id="zoomIn" href="#">+</a>
+            <a id="zoomOut" href="#">-</a>
+        </nav>
+        <a id="annotations" class="on" href="#">
+            <svg width="12" height="14">
+                <polygon transform="translate(6,8), scale(1.2)"
+                         points="4.569,2.637 0,5.276 -4.569,2.637 -4.569,-2.637 0,-5.276 4.569,-2.637"/>
+            </svg>
+            Annotations <span>on</span></a>
+        <a id="zoomReset" href="#">Reset zoom</a>
 
-		</div>
-	</div>
-	<div class="row clearfix">
-		<div class="col-md-12 column data">
-            <p>Data goes here</p>
-		</div>
-	</div>
+        <div id="chart" class="annotationsOn">
+        </div>
+    </div>
+    <ul id="legend" class="clearfix">
+        <li>
+            <svg width="13" height="16">
+                <polygon class="high" transform="translate(7,8), scale(1.4)"
+                         points="4.569,2.637 0,5.276 -4.569,2.637 -4.569,-2.637 0,-5.276 4.569,-2.637"/>
+            </svg>
+            Growing by 30% or more
+        </li>
+        <li>
+            <svg width="13" height="16">
+                <polygon class="medium" transform="translate(7,8), scale(1.4)"
+                         points="4.569,2.637 0,5.276 -4.569,2.637 -4.569,-2.637 0,-5.276 4.569,-2.637"/>
+            </svg>
+            Growing by 10% - 30%
+        </li>
+        <li>
+            <svg width="13" height="16">
+                <polygon class="low" transform="translate(7,8), scale(1.4)"
+                         points="4.569,2.637 0,5.276 -4.569,2.637 -4.569,-2.637 0,-5.276 4.569,-2.637"/>
+            </svg>
+            Growing by 0 - 10%
+        </li>
+        <li>
+            <svg width="13" height="16">
+                <polygon class="negative" transform="translate(7,8), scale(1.4)"
+                         points="4.569,2.637 0,5.276 -4.569,2.637 -4.569,-2.637 0,-5.276 4.569,-2.637"/>
+            </svg>
+            Declining by 0 - 10%
+        </li>
+        <li>
+            <svg width="13" height="16">
+                <polygon class="inactive" transform="translate(7,8), scale(1.4)"
+                         points="4.569,2.637 0,5.276 -4.569,2.637 -4.569,-2.637 0,-5.276 4.569,-2.637"/>
+            </svg>
+            Occupations in non-selected categories
+        </li>
+    </ul>
 </div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2/.min.js"><\/script>')</script>
+
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+<script>window.d3 || document.write('<script src="js/vendor/d3.v3.min.js"><\/script>')</script>
+
+<script src="js/underscore.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $(function () {
+        scatter();
+        $('#zoomReset').on('click', function (e) {
+            e.preventDefault();
+            $('#chart').empty();
+            console.log("sadf");
+            scatter();
+        });
+    });
+</script>
+<script type="text/javascript" src="js/72ae4231-e1cd-4917-9f19-42d12f8da388.js"></script>
+<!-- NBED - temporary for localhost -->
 </body>
 </html>
