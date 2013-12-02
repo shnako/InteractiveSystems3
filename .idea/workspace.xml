@@ -468,13 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="7" selection-start="568" selection-end="568" vertical-scroll-proportion="0.34733257" vertical-offset="0" max-vertical-offset="881">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="151" column="0" selection-start="7293" selection-end="7293" vertical-scroll-proportion="2.8745801" vertical-offset="0" max-vertical-offset="3094">
@@ -482,6 +475,13 @@
             <marker date="1386017600219" expanded="true" signature="831:1083" placeholder="..." />
             <marker date="1386017600219" expanded="true" signature="924:952" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="220" selection-end="220" vertical-scroll-proportion="0.13507378" vertical-offset="0" max-vertical-offset="881">
+          <folding />
         </state>
       </provider>
     </entry>
