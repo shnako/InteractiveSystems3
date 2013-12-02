@@ -388,69 +388,8 @@ var scatter = function () {
 
         })();
 
-        // Generate Nav List from data:
-        //navListGen(data);
-
-
-        // Testing a technique to add GMaps-style zoom buttons. Not working yet:
-        /*
-         function wheel(event) {
-         //    console.log(event.detail)
-         alert(event.detail);
-         }
-
-         var view;
-         window.onload = function() {
-         view = document.getElementById('view');
-         view.addEventListener('DOMMouseScroll', wheel, false);
-         }
-
-         window.ChromeWheel  = function() {
-         var evt = document.createEvent("MouseEvents");
-         evt.initMouseEvent(
-         'DOMMouseScroll', // in DOMString typeArg,
-         true,  // in boolean canBubbleArg,
-         true,  // in boolean cancelableArg,
-         window,// in views::AbstractView viewArg,
-         120,   // in long detailArg,
-         0,     // in long screenXArg,
-         0,     // in long screenYArg,
-         0,     // in long clientXArg,
-         0,     // in long clientYArg,
-         0,     // in boolean ctrlKeyArg,
-         0,     // in boolean altKeyArg,
-         0,     // in boolean shiftKeyArg,
-         0,     // in boolean metaKeyArg,
-         0,     // in unsigned short buttonArg,
-         null   // in EventTarget relatedTargetArg
-         );
-         view.dispatchEvent(evt);
-         }
-
-         $('#zoom a').on('click',function(e){
-         e.preventDefault();
-         zoom();
-         //console.log(zoom);
-         });
-         //*/
     });
 }
-
-// Generate the list of categories. Only needs to be done once, then copy-paste the info from Firebug into index.html, because the static HTML copy loads faster and places less strain on the DOM than an auto-generated version.
-/*
- function navListGen(data){
- var foo = _.uniq(data,function(d){
- return d.Category;
- }).map(function(d){
- return d.Category;
- }).sort();;
- var nl = '';
- _.each(foo,function(d,i){
- nl+= '<li class="nl"><a href="'+i+'">'+d+'</a></li>';
- });
- $('#navList').html(nl);
- };
- //*/
 
 // Get the median of an array.
 function median(values) {
