@@ -72,16 +72,27 @@
 .data {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    display:none;
+    /*display:none;*/
 }
 
 .data table {
     display: block;
     overflow-x: scroll;
     color: #fff;
-    background-color:#34495e;
+    background-color:#7f8c8d;
+}
+
+.data table tr:nth-child(odd) {
+    background-color:#95a5a6;
 }
 
 .data table tr:first-child {
     background-color:#2980b9;
+    height: 27px!important;
+    overflow:hidden;
+}
+
+.data table td {
+    padding: 3px;
+    border: 1px solid #ececec;
 }
