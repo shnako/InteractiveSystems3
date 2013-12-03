@@ -5,7 +5,7 @@ var scatter = function () {
     d3.csv("js/WHO data.csv", function (data) {
 
         var margin = {top: 20, right: 30, bottom: 40, left: 45},
-            width = 855 - margin.left - margin.right,
+            width = 850 - margin.left - margin.right,
             height = 500 - margin.top - margin.bottom;
 
         var xMax = d3.max(data, function (d) {
@@ -26,21 +26,6 @@ var scatter = function () {
         var y = d3.scale.linear()
             .domain([yMin, yMax])
             .range([height, 0]);
-
-        // Colour classes array:
-        var classes = ['high', 'medium', 'low', 'negative'];
-        // Use in conjunction with classes array:
-        var colourScale = function (val, array, active) {
-            if (val > 30) {
-                return array[0];
-            } else if (val > 10) {
-                return array[1];
-            } else if (val > 0) {
-                return array[2];
-            } else {
-                return array[3];
-            }
-        };
 
         //Define X axis
         var xAxis = d3.svg.axis()
@@ -133,14 +118,12 @@ var scatter = function () {
             .data(data)
             .enter()
             .append("polygon")
-            .attr("class", function (d) {
-                return colourScale(d.Gold, classes);
-            })
+            .attr("class", "##1abc9c")
             .attr("transform", function (d) {
                 return "translate(" + x(d.Gold) + "," + y(d.Silver) + ")";
             })
             .attr('points', '4.569,2.637 0,5.276 -4.569,2.637 -4.569,-2.637 0,-5.276 4.569,-2.637')
-            .attr("opacity", "0.8");
+            .attr("opacity", "0.5");
 
 
         // Create X Axis label
