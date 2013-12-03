@@ -21,13 +21,23 @@
     <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/select2.min.js"></script>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="js/vendor/d3.v3.min.js"></script>
+    <script src="js/underscore.js"></script>
+    <script type="text/javascript" src="js/72ae4231-e1cd-4917-9f19-42d12f8da388.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
 <div class="container">
     <div class="row clearfix">
         <div class="col-md-9 column someclass scatterplot">
-            <p>Scatterplot goes here</p>
+                <div id="chartContainer">
+        <a id="zoomReset" href="#">Reset zoom</a>
+        <div id="chart">
+        </div>
+    </div>
         </div>
         <div class="col-md-3 column filters">
             <div class="filters-block">
