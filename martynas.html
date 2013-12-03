@@ -6,38 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="">
 
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/jquery-ui.css" rel="stylesheet">
     <link href="css/select2.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <![endif]-->
 
-    <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/vendor/d3.v3.min.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
     <script type="text/javascript" src="js/vendor/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/select2.min.js"></script>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    <script type="text/javascript" src="js/vendor/d3.v3.min.js"></script>
-    <script src="js/underscore.js"></script>
-    <script type="text/javascript" src="js/72ae4231-e1cd-4917-9f19-42d12f8da388.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+
 </head>
 
 <body>
 <div class="container">
     <div class="row clearfix">
         <div class="col-md-9 column someclass scatterplot">
-                <div id="chartContainer">
-        <a id="zoomReset" href="#">Reset zoom</a>
-        <div id="chart">
-        </div>
-    </div>
+            <div id="chartContainer">
+                <div id="chart"></div>
+            </div>
         </div>
         <div class="col-md-3 column filters">
             <div class="filters-block">
@@ -119,5 +119,15 @@
         </div>
     </div>
 </div>
+<script>
+    $(function () {
+        scatter();
+        $('#zoomReset').on('click', function (e) {
+            e.preventDefault();
+            $('#chart').empty();
+            scatter();
+        });
+    });
+</script>
 </body>
 </html>

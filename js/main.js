@@ -2,20 +2,20 @@
 var scatter = function () {
     var categories = [];
 
-    d3.csv("js/AllOccupations.csv", function (data) {
+    d3.csv("js/WHO data.csv", function (data) {
 
-        var margin = {top: 0, right: 0, bottom: 50, left: 60},
-            width = 1050 - margin.left - margin.right,
+        var margin = {top: 20, right: 30, bottom: 40, left: 50},
+            width = 855 - margin.left - margin.right,
             height = 500 - margin.top - margin.bottom;
 
         var xMax = d3.max(data, function (d) {
-                return +d.TotalEmployed2011;
+                return +d.Gold;
             }) * 1.05,
-            xMin = 0,
+            xMin = -50,
             yMax = d3.max(data, function (d) {
-                return +d.MedianSalary2011;
+                return +d.Silver;
             }) * 1.05,
-            yMin = 0;
+            yMin = -50;
 
 
         //Define scales
@@ -59,10 +59,10 @@ var scatter = function () {
 
         // Define medians. There must be a way to do this with d3.js but I can't figure it out.
         var xMed = median(_.map(data, function (d) {
-            return d.TotalEmployed2011;
+            return d.Gold;
         }));
         var yMed = median(_.map(data, function (d) {
-            return d.MedianSalary2011;
+            return d.Silver;
         }));
 
 
@@ -207,7 +207,7 @@ var scatter = function () {
                 return colourScale(d.ProjectedGrowth2020, classes);
             })
             .attr("transform", function (d) {
-                return "translate(" + x(d.TotalEmployed2011) + "," + y(d.MedianSalary2011) + ")";
+                return "translate(" + x(d.Gold) + "," + y(d.Silver) + ")";
             })
             .attr('points', '4.569,2.637 0,5.276 -4.569,2.637 -4.569,-2.637 0,-5.276 4.569,-2.637')
             .attr("opacity", "0.8")
@@ -215,8 +215,8 @@ var scatter = function () {
                 //Update the tooltip value
                 tooltip.select("#name").text(d.OccupationTitle);
                 tooltip.select("#desc").text(d.Category);
-                tooltip.select("#totEmp").text(numberWithCommas(d.TotalEmployed2011));
-                tooltip.select("#medSal").text("$" + numberWithCommas(d.MedianSalary2011));
+                tooltip.select("#totEmp").text(numberWithCommas(d.Gold));
+                tooltip.select("#medSal").text("$" + numberWithCommas(d.Silver));
                 tooltip.select("#projGrowth").text(d.ProjectedGrowth2020 + '%');
                 tooltip.select("#education").text(d.Education);
                 tooltip.select("#experience").text(d.Experience);
@@ -288,7 +288,7 @@ var scatter = function () {
 
             svg.selectAll("polygon")
                 .attr("transform", function (d) {
-                    return "translate(" + x(d.TotalEmployed2011) + "," + y(d.MedianSalary2011) + ")";
+                    return "translate(" + x(d.Gold) + "," + y(d.Silver) + ")";
                 });
         };
 

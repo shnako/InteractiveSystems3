@@ -17,6 +17,25 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="martynas.html" pinned="false" current="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/martynas.html">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state line="32" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.4002242" vertical-offset="187" max-vertical-offset="2363">
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="IS3" />
@@ -26,7 +45,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="722" selection-end="722" vertical-scroll-proportion="0.53571427" vertical-offset="0" max-vertical-offset="6225">
+            <state line="18" column="0" selection-start="572" selection-end="572" vertical-scroll-proportion="-1.1163595" vertical-offset="1275" max-vertical-offset="7055">
               <folding />
             </state>
           </provider>
@@ -35,29 +54,17 @@
       <file leaf-file-name="scripts.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="9243" selection-start="10411" selection-end="10411" vertical-scroll-proportion="-13.977273" vertical-offset="0" max-vertical-offset="3825">
+            <state line="41" column="9243" selection-start="10411" selection-end="10411" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="4335">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="martynas.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/martynas.html">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="24" selection-start="1283" selection-end="1283" vertical-scroll-proportion="-10.625" vertical-offset="165" max-vertical-offset="1935">
+            <state line="502" column="41" selection-start="8686" selection-end="8686" vertical-scroll-proportion="-0.4117647" vertical-offset="8513" max-vertical-offset="14382">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="52" selection-start="523" selection-end="571" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="2670">
-              <folding>
-                <marker date="1386063502000" expanded="true" signature="831:1083" placeholder="..." />
-                <marker date="1386063502000" expanded="true" signature="924:952" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -65,7 +72,7 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="20" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
+            <state line="91" column="20" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0" vertical-offset="887" max-vertical-offset="1768">
               <folding />
             </state>
           </provider>
@@ -85,21 +92,21 @@
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/mart.html" />
         <option value="$PROJECT_DIR$/js/vendor/bootstrap.min.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/HTML5.html" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/scripts.js" />
         <option value="$PROJECT_DIR$/WHO data JSON.txt" />
         <option value="$PROJECT_DIR$/js/scripts.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/martynas.html" />
+        <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="808" />
+    <option name="x" value="1920" />
+    <option name="width" value="1008" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -187,6 +194,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteractiveSystems3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -197,15 +218,15 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="Settings.JavaScript" />
     <property name="JavaScriptLanguageLevel" value="ES5" />
     <property name="FullScreen" value="false" />
     <property name="JavaScriptPreferStrict" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -304,6 +325,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -325,9 +349,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -399,7 +420,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="808" extended-state="6" />
+    <frame x="1920" y="0" width="1008" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -478,13 +499,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="868" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="14382">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HTML5.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="51" selection-start="732" selection-end="732" vertical-scroll-proportion="0.23846154" vertical-offset="70" max-vertical-offset="720">
@@ -492,7 +506,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WHO data JSON.txt">
+    <entry file="file://$PROJECT_DIR$/js/WHO data JSON.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="8" selection-start="0" selection-end="420331" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3030">
           <folding />
@@ -504,25 +518,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="9243" selection-start="10411" selection-end="10411" vertical-scroll-proportion="-13.977273" vertical-offset="0" max-vertical-offset="3825">
+        <state line="41" column="9243" selection-start="10411" selection-end="10411" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="4335">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="20" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="52" selection-start="523" selection-end="571" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="2670">
-          <folding>
-            <marker date="1386063502000" expanded="true" signature="831:1083" placeholder="..." />
-            <marker date="1386063502000" expanded="true" signature="924:952" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -533,16 +530,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="502" column="41" selection-start="8686" selection-end="8686" vertical-scroll-proportion="-0.4117647" vertical-offset="8513" max-vertical-offset="14382">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="0" selection-start="4588" selection-end="4588" vertical-scroll-proportion="0.51543945" vertical-offset="909" max-vertical-offset="1751">
+          <folding>
+            <marker date="1386070953209" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386070953209" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="20" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0" vertical-offset="887" max-vertical-offset="1768">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/martynas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="24" selection-start="1283" selection-end="1283" vertical-scroll-proportion="-10.625" vertical-offset="165" max-vertical-offset="1935">
+        <state line="32" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.4002242" vertical-offset="187" max-vertical-offset="2363">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="722" selection-end="722" vertical-scroll-proportion="0.53571427" vertical-offset="0" max-vertical-offset="6225">
+        <state line="18" column="0" selection-start="572" selection-end="572" vertical-scroll-proportion="-1.1163595" vertical-offset="1275" max-vertical-offset="7055">
           <folding />
         </state>
       </provider>
