@@ -55,9 +55,6 @@ var scatter = function () {
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
             .call(d3.behavior.zoom().x(x).y(y).scaleExtent([1, 13]).on("zoom", zoom));
 
-
-        var quadrant = d3.select("#quadrant");
-
         // Create background
         svg.append("rect")
             .attr("width", width)
