@@ -34,7 +34,7 @@ $(document).ready(function() {
     $("#country").select2();
     // TODO: implement reset function
     $( "#reset").click(function() {
-        alert("yashi akasa");
+        alert("iesi acasa");
     });
 
     // Load CSV contents (195 cols)

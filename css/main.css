@@ -490,24 +490,6 @@ rect {
     fill: none;
 }
 
-.annotationsOn .medianLine {
-    shape-rendering: crispEdges;
-    stroke: rgba(1, 71, 87, 0.4);
-    stroke-width: 2px;
-    stroke-dasharray: 10, 7;
-    fill: none;
-}
-
-.annotationsOn .med {
-    -moz-transition: fill linear 0.2s;
-    -webkit-transition: fill linear 0.2s;
-    -o-transition: fill linear 0.2s;
-    transition: fill linear 0.2s;
-}
-
-.annotationsOn .med:hover {
-    fill: rgba(1, 71, 87, 0.1);
-}
 
 polygon {
     -moz-transition: fill linear 0.5s;
@@ -515,31 +497,6 @@ polygon {
     -o-transition: fill linear 0.5s;
     transition: fill linear 0.5s;
     cursor: default;
-}
-
-.high {
-    fill: #9d3d38;
-    color: #9d3d38;
-}
-
-.medium {
-    fill: #ca7b43;
-    color: #ca7b43;
-}
-
-.low {
-    fill: #f9b743;
-    color: #e7a42d;
-}
-
-.negative {
-    fill: #9bd6d7;
-    color: #62b5b6;
-}
-
-.inactive {
-    fill: #aaa;
-    opacity: 0.15;
 }
 
 .label {
@@ -567,22 +524,6 @@ polygon {
     font-size: 20px;
     margin-bottom: 5px;
     text-decoration: none;
-}
-
-#moreInfo {
-    background: #bac2a5;
-    padding: 10px 20px;
-    border: 3px solid rgba(0, 0, 0, 0.05);
-    border-width: 3px 0;
-}
-
-#moreInfo h4 {
-    margin: 0;
-    color: #495b4d;
-}
-
-#moreInfo p {
-    margin: 5px 0 6px;
 }
 
 #sources {

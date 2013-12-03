@@ -11,11 +11,15 @@ var scatter = function () {
         var xMax = d3.max(data, function (d) {
                 return +d.Gold;
             }) * 1.05,
-            xMin = -45,
+            xMin = d3.min(data, function (d) {
+                return +d.Gold;
+            }) * 1.05,
             yMax = d3.max(data, function (d) {
                 return +d.Silver;
             }) * 1.05,
-            yMin = -45;
+            yMin = d3.min(data, function (d) {
+                return +d.Silver;
+            }) * 1.05;
 
 
         //Define scales
@@ -123,7 +127,7 @@ var scatter = function () {
                 return "translate(" + x(d.Gold) + "," + y(d.Silver) + ")";
             })
             .attr('points', '4.569,2.637 0,5.276 -4.569,2.637 -4.569,-2.637 0,-5.276 4.569,-2.637')
-            .attr("opacity", "0.5");
+            .attr("opacity", "0.8");
 
 
         // Create X Axis label
@@ -197,8 +201,3 @@ function median(values) {
     else
         return (parseFloat(values[half - 1]) + parseFloat(values[half])) / 2.0;
 };
-
-//Add 'thousands' commas to numbers, for extra prettiness:
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
