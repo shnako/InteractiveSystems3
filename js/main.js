@@ -46,14 +46,6 @@ var scatter = function () {
             .tickSize(-width)
             .tickFormat(d3.format("s"));
 
-        // Define medians. There must be a way to do this with d3.js but I can't figure it out.
-        var xMed = median(_.map(data, function (d) {
-            return d.Gold;
-        }));
-        var yMed = median(_.map(data, function (d) {
-            return d.Silver;
-        }));
-
 
         var svg = d3.select("#chart").append("svg")
             .attr("id", "scatter")
@@ -100,22 +92,6 @@ var scatter = function () {
             .attr("x2", 0)
             .attr("y2", height);
 
-        //Create median lines:
-        objects.append("svg:line")
-            .attr("class", "medianLine hMedianLine")
-            .attr("x1", 0)
-            .attr("y1", 0)
-            .attr("x2", width)
-            .attr("y2", 0)
-            .attr("transform", "translate(0," + (y(yMed)) + ")");
-        objects.append("svg:line")
-            .attr("class", "medianLine vMedianLine")
-            .attr("x1", 0)
-            .attr("y1", 0)
-            .attr("x2", 0)
-            .attr("y2", height)
-            .attr("transform", "translate(" + (x(xMed)) + ",0)");
-
 
         //Create hexagon points
         objects.selectAll("polygon")
@@ -148,11 +124,6 @@ var scatter = function () {
             .attr("transform", "rotate(-90)")
             .text("Median annual salary in 2011 ($)");
 
-        //If val is negative, return zero:
-        function noNeg(val) {
-            return val = val > 0 ? val : 0;
-        }
-
         // Zoom/pan behaviour:
         function zoom() {
             svg.select(".x.axis").call(xAxis);
@@ -160,25 +131,6 @@ var scatter = function () {
 
             objects.select(".hAxisLine").attr("transform", "translate(0," + y(0) + ")");
             objects.select(".vAxisLine").attr("transform", "translate(" + x(0) + ",0)");
-
-            objects.select(".hMedianLine").attr("transform", "translate(0," + y(yMed) + ")");
-            objects.select(".vMedianLine").attr("transform", "translate(" + x(xMed) + ",0)");
-
-            objects.select(".tlMed")
-                .attr("width", noNeg(x(xMed)))
-                .attr("height", noNeg(y(yMed)));
-            objects.select(".trMed")
-                .attr("width", noNeg(width - x(xMed)))
-                .attr("height", noNeg(y(yMed)))
-                .attr("transform", "translate(" + (x(xMed)) + ",0)");
-            objects.select(".brMed")
-                .attr("width", noNeg(width - x(xMed)))
-                .attr("height", noNeg(height - y(yMed)))
-                .attr("transform", "translate(" + (x(xMed)) + "," + (y(yMed)) + ")");
-            objects.select(".blMed")
-                .attr("width", noNeg(x(xMed)))
-                .attr("height", noNeg(height - y(yMed)))
-                .attr("transform", "translate(0," + (y(yMed)) + ")");
 
             svg.selectAll("polygon")
                 .attr("transform", function (d) {
@@ -188,16 +140,3 @@ var scatter = function () {
 
     });
 }
-
-// Get the median of an array.
-function median(values) {
-    values.sort(function (a, b) {
-        return a - b;
-    });
-    var half = Math.floor(values.length / 2);
-
-    if (values.length % 2)
-        return values[half];
-    else
-        return (parseFloat(values[half - 1]) + parseFloat(values[half])) / 2.0;
-};
