@@ -4,18 +4,18 @@ var scatter = function () {
 
     d3.csv("js/WHO data.csv", function (data) {
 
-        var margin = {top: 20, right: 30, bottom: 40, left: 50},
+        var margin = {top: 20, right: 30, bottom: 40, left: 45},
             width = 855 - margin.left - margin.right,
             height = 500 - margin.top - margin.bottom;
 
         var xMax = d3.max(data, function (d) {
                 return +d.Gold;
             }) * 1.05,
-            xMin = -50,
+            xMin = -45,
             yMax = d3.max(data, function (d) {
                 return +d.Silver;
             }) * 1.05,
-            yMin = -50;
+            yMin = -45;
 
 
         //Define scales
@@ -75,7 +75,6 @@ var scatter = function () {
             .call(d3.behavior.zoom().x(x).y(y).scaleExtent([1, 13]).on("zoom", zoom));
 
 
-        var tooltip = d3.select("#tooltip");
         var quadrant = d3.select("#quadrant");
 
         // Create background
@@ -128,75 +127,6 @@ var scatter = function () {
             .attr("y2", height)
             .attr("transform", "translate(" + (x(xMed)) + ",0)");
 
-        //Create median boxes:
-        objects.append("rect")
-            .attr("class", "tlMed med")
-            .attr("width", x(xMed))
-            .attr("height", y(yMed))
-            .on("mouseover", function () {
-                //Update the quadrant description:
-                quadrant.select("h5").text("Elite Players");
-                quadrant.select("p").text("Occupations in this quadrant pay the most, but employ very few: Competition can be tough.");
-                quadrant.classed("hidden", false);
-            })
-            .on("mouseout", function () {
-                //Update the quadrant description:
-                quadrant.classed("hidden", true);
-                quadrant.select("h5").text("");
-                quadrant.select("p").text("");
-            });
-        objects.append("rect")
-            .attr("class", "trMed med")
-            .attr("width", width - x(xMed))
-            .attr("height", y(yMed))
-            .attr("transform", "translate(" + (x(xMed)) + ",0)")
-            .on("mouseover", function () {
-                //Update the quadrant description:
-                quadrant.select("h5").text("Top Performers");
-                quadrant.select("p").text("Occupations in this quadrant employ lots of people and offer above-average salaries: Seriously worth considering.");
-                quadrant.classed("hidden", false);
-            })
-            .on("mouseout", function () {
-                //Update the quadrant description:
-                quadrant.classed("hidden", true);
-                quadrant.select("h5").text("");
-                quadrant.select("p").text("");
-            });
-        objects.append("rect")
-            .attr("class", "brMed med")
-            .attr("width", width - x(xMed))
-            .attr("height", height - y(yMed))
-            .attr("transform", "translate(" + (x(xMed)) + "," + (y(yMed)) + ")")
-            .on("mouseover", function () {
-                //Update the quadrant description:
-                quadrant.select("h5").text("A Good Bet");
-                quadrant.select("p").text("Occupations in this category may not pay the most, but there are lots of opportunities.");
-                quadrant.classed("hidden", false);
-            })
-            .on("mouseout", function () {
-                //Update the quadrant description:
-                quadrant.classed("hidden", true);
-                quadrant.select("h5").text("");
-                quadrant.select("p").text("");
-            });
-        objects.append("rect")
-            .attr("class", "blMed med")
-            .attr("width", x(xMed))
-            .attr("height", height - y(yMed))
-            .attr("transform", "translate(0," + (y(yMed)) + ")")
-            .on("mouseover", function () {
-                //Update the quadrant description:
-                quadrant.select("h5").text("A Matter of Taste");
-                quadrant.select("p").html("Occupations in this quadrant may not pay the most or employ the most people, but if it&rsquo;s your passion then go for it!");
-                quadrant.classed("hidden", false);
-            })
-            .on("mouseout", function () {
-                //Update the quadrant description:
-                quadrant.classed("hidden", true);
-                quadrant.select("h5").text("");
-                quadrant.select("p").text("");
-            });
-
 
         //Create hexagon points
         objects.selectAll("polygon")
@@ -204,36 +134,13 @@ var scatter = function () {
             .enter()
             .append("polygon")
             .attr("class", function (d) {
-                return colourScale(d.ProjectedGrowth2020, classes);
+                return colourScale(d.Gold, classes);
             })
             .attr("transform", function (d) {
                 return "translate(" + x(d.Gold) + "," + y(d.Silver) + ")";
             })
             .attr('points', '4.569,2.637 0,5.276 -4.569,2.637 -4.569,-2.637 0,-5.276 4.569,-2.637')
-            .attr("opacity", "0.8")
-            .on("mouseover", function (d) {
-                //Update the tooltip value
-                tooltip.select("#name").text(d.OccupationTitle);
-                tooltip.select("#desc").text(d.Category);
-                tooltip.select("#totEmp").text(numberWithCommas(d.Gold));
-                tooltip.select("#medSal").text("$" + numberWithCommas(d.Silver));
-                tooltip.select("#projGrowth").text(d.ProjectedGrowth2020 + '%');
-                tooltip.select("#education").text(d.Education);
-                tooltip.select("#experience").text(d.Experience);
-
-                // Determine whether polygon is in left/right side of screen, and alter tooltip location accordingly:
-                if ($(this).attr("transform").substr(10, 10) * 1 > width / 2) tooltip.classed("leftPos", true);
-                else tooltip.classed("leftPos", false);
-
-                //Show the tooltip
-                if (($(this).attr('class') != 'inactive'))
-                    tooltip.classed("hidden", false);
-
-            })
-            .on("mouseout", function () {
-                //Hide the tooltip
-                tooltip.classed("hidden", true);
-            });
+            .attr("opacity", "0.8");
 
 
         // Create X Axis label
@@ -291,102 +198,6 @@ var scatter = function () {
                     return "translate(" + x(d.Gold) + "," + y(d.Silver) + ")";
                 });
         };
-
-        // Filter function: Sets polygons in some categories to inactive using the category selecter:
-        function filter() {
-            svg.selectAll("polygon")
-                .attr("class", function (d) {
-                    if (categories.length > 0 && !_.contains(categories, d.Category)) {
-                        $.each(categories, function (i) {
-                            $('#navToggle span').append(categories[i] + ' ');
-                        });
-                        return "inactive";
-                    } else {
-                        return colourScale(d.ProjectedGrowth2020, classes);
-                    }
-                });
-        };
-
-        // jQuery Nav List events:
-        (function () {
-            // cache jQuery element calls:
-            var nt = $('#navToggle'),
-                nla = $('.nl a'),
-                rn = $('#resetNav');
-
-            // Show/hide nav list when button is clicked:
-            nt.off('click').on('click', function (e) {
-                e.preventDefault();
-                $(this).toggleClass('active');
-                if ($(this).hasClass('active')) {
-                    $(this).next('#navListContainer').slideDown();
-                } else {
-                    $(this).next('#navListContainer').slideUp();
-                }
-            });
-
-            // Filter points by category:
-            nla.off('click').on('click', function (e) {
-                e.preventDefault();
-                $(this).toggleClass('a');
-                if ($(this).hasClass('a')) {
-                    categories.push($(this).text());
-                } else {
-                    categories = _.without(categories, $(this).text());
-                }
-                filter();
-                if (categories.length > 0) {
-                    var cats = '',
-                        showedNames = 0;
-                    $.each(categories, function (i) {
-                        //var added = cats += categories[i]+'; ';
-                        if ((cats + categories[i] + '; ').length < 130) {
-                            var gap = (categories.length > 1 && i < categories.length - 1) ? '; ' : '';
-                            showedNames++;
-                            cats += categories[i] + gap;
-                        } else {
-                            return false;
-                        }
-                    });
-                    if ((categories.length - showedNames) > 1)
-                        cats = cats.substring(0, cats.length - 2) + ' + ' + (categories.length - showedNames) + ' other categories';
-                    else if ((categories.length - showedNames) > 0)
-                        cats = cats.substring(0, cats.length - 2) + ' + 1 other category';
-                    nt.addClass('showCats').find('span').html(cats);
-                } else {
-                    nt.removeClass('showCats').find('span').html('Select the categories you are interested in:');
-                }
-                ;
-            });
-
-            // Reset categories:
-            rn.off('click').on('click', function (e) {
-                e.preventDefault();
-                nla.removeClass('a');
-                nt.removeClass('showCats').find('span').html('Select the categories you are interested in:');
-                categories = [];
-                filter();
-            });
-
-            // Reset categories AND close categories menu:
-            $('#doneNav').off('click').on('click', function (e) {
-                e.preventDefault();
-                nla.removeClass('a');
-                nt.removeClass('active showCats').find('span').html('Select the categories you are interested in:');
-                categories = [];
-                filter();
-                $('#navListContainer').slideUp();
-            });
-
-            //Annotations toggle button:
-            $('#annotations').off('click').on('click', function (e) {
-                e.preventDefault();
-                var txt = $(this).hasClass('on') ? 'off' : 'on';
-                $(this).toggleClass('on').find('span').text(txt);
-                $('#chart, #quadrant').toggleClass('annotationsOn');
-            });
-
-        })();
 
     });
 }

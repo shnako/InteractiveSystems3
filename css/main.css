@@ -569,32 +569,6 @@ polygon {
     text-decoration: none;
 }
 
-#legend {
-    margin: 0;
-    padding: 20px 0 25px;
-    list-style: none;
-}
-
-#legend li {
-    float: left;
-    padding: 1px 30px 2px 0;
-    font-size: 13px;
-}
-
-/*#legend .high {background:#9d3d38;}
-#legend .medium {background:#ca7b43;}
-#legend .low {background:#f9b743;}
-#legend .negative {background:#9bd6d7;}*/
-#legend li svg {
-    margin: 0 3px 0 0;
-    position: relative;
-    top: 4px;
-}
-
-#legend .inactive {
-    opacity: 0.4;
-}
-
 #moreInfo {
     background: #bac2a5;
     padding: 10px 20px;
@@ -618,46 +592,6 @@ polygon {
 #sources p {
     font-size: 14px;
 }
-
-/* ==========================================================================
-   Fonts list: for reference only. Switch from first list to second on publish:
-   ========================================================================== */
-/*
-localhost fonts-list {
-	font-family:'Trade Gothic Next W01'; - regular
-	font-family:'TradeGothicNextW01-Bold 693229'; - regular bold
-	font-family:'TradeGothicNextW01-Bold 693232'; - condensed bold
-	font-family:'TradeGothicNextW01-BdCm'; - compressed bold
-	font-family:'TradeGothicNextW01-Ligh 693250'; - light
-}
-rasmussen fonts-list {
-	font-family:"TradeGothicNextRegular";
-	font-family:"TradeGothicNextBold";
-	font-family:"TradeGothicNextCompressedBold";
-	font-family: "TradeGothicNextCondensedBold";
-	font-family:"TradeGothicNextBoldItalic";
-	font-family:"TradeGothicNextCondensed";
-	font-family:"TradeGothicNextHeavy";
-	font-family:"TradeGothicNextHeavyItalic";
-	font-family:"TradeGothicNextItalic";
-	font-family:"TradeGothicNextLight";
-	font-family:"TradeGothicNextLightItalic";
-	font-family:"TradeGothicNextCompressed";
-	font-family:"TradeGothicNextCompressedHeavy";
-	font-family:"TradeGothicNextCondensedBoldItalic";
-	font-family:"TradeGothicNextCondensedHeavy";
-	font-family:"TradeGothicNextCondensedHeavyItalic";
-	font-family:"TradeGothicNextCondensedItalic";
-}
-*/
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Image replacement
- */
 
 .ir {
     background-color: transparent;

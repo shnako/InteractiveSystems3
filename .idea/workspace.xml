@@ -25,7 +25,7 @@
             <file leaf-file-name="martynas.html" pinned="false" current="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/martynas.html">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state line="32" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.4002242" vertical-offset="187" max-vertical-offset="2363">
+                  <state line="17" column="43" selection-start="660" selection-end="660" vertical-scroll-proportion="0.114349775" vertical-offset="187" max-vertical-offset="2363">
                     <folding />
                   </state>
                 </provider>
@@ -45,7 +45,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="572" selection-end="572" vertical-scroll-proportion="-1.1163595" vertical-offset="1275" max-vertical-offset="7055">
+            <state line="36" column="32" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.5092166" vertical-offset="170" max-vertical-offset="3842">
               <folding />
             </state>
           </provider>
@@ -54,7 +54,7 @@
       <file leaf-file-name="scripts.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="9243" selection-start="10411" selection-end="10411" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="4335">
+            <state line="3" column="38" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4335">
               <folding />
             </state>
           </provider>
@@ -63,7 +63,7 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="502" column="41" selection-start="8686" selection-end="8686" vertical-scroll-proportion="-0.4117647" vertical-offset="8513" max-vertical-offset="14382">
+            <state line="657" column="2" selection-start="11051" selection-end="11051" vertical-scroll-proportion="0.0" vertical-offset="8299" max-vertical-offset="13260">
               <folding />
             </state>
           </provider>
@@ -89,7 +89,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/main.html" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/mart.html" />
         <option value="$PROJECT_DIR$/js/vendor/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/HTML5.html" />
@@ -100,6 +99,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/martynas.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/css/main.css" />
       </list>
     </option>
   </component>
@@ -499,13 +499,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="868" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HTML5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="51" selection-start="732" selection-end="732" vertical-scroll-proportion="0.23846154" vertical-offset="70" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/WHO data JSON.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="8" selection-start="0" selection-end="420331" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3030">
@@ -516,34 +509,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="9243" selection-start="10411" selection-end="10411" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="4335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/72ae4231-e1cd-4917-9f19-42d12f8da388.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.25" vertical-offset="168" max-vertical-offset="840">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="502" column="41" selection-start="8686" selection-end="8686" vertical-scroll-proportion="-0.4117647" vertical-offset="8513" max-vertical-offset="14382">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="0" selection-start="4588" selection-end="4588" vertical-scroll-proportion="0.51543945" vertical-offset="909" max-vertical-offset="1751">
-          <folding>
-            <marker date="1386070953209" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1386070953209" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -554,16 +523,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="38" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/martynas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.4002242" vertical-offset="187" max-vertical-offset="2363">
+        <state line="17" column="43" selection-start="660" selection-end="660" vertical-scroll-proportion="0.114349775" vertical-offset="187" max-vertical-offset="2363">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="657" column="2" selection-start="11051" selection-end="11051" vertical-scroll-proportion="0.0" vertical-offset="8299" max-vertical-offset="13260">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="572" selection-end="572" vertical-scroll-proportion="-1.1163595" vertical-offset="1275" max-vertical-offset="7055">
+        <state line="36" column="32" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.5092166" vertical-offset="170" max-vertical-offset="3842">
           <folding />
         </state>
       </provider>
