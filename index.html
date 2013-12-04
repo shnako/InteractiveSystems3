@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Data Visualisation Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/select2.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script type="text/javascript" src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/vendor/d3.v3.min.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/select2.min.js"></script>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-9 column someclass scatterplot">
+            <div id="chartContainer">
+                <!-- Render the char -->
+                <div id="chart"></div>
+            </div>
+        </div>
+        <div class="col-md-3 column filters">
+            <div class="filters-block">
+                <span>Data</span>
+                <div class="filters-block-part">
+                    <label for="x_axis">X:</label>
+                    <select name="x_axis" id="x_axis" class="axes">
+                    </select>
+                </div>
+                <div class="filters-block-part">
+                    <label for="y_axis">Y:</label>
+                    <select name="y_axis" id="y_axis" class="axes">
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="filters-block">
+                <span>Data ranges</span>
+                <div class="filters-block-part">
+                    <!--<label for="x_scale">X:</label>-->
+                    <div class="slidexr-range slider-range-x" name="x_scale"></div>                    
+                    <input type="number" id="x_min_value" class="range-value" placeholder="min" />
+                    <input type="number" id="x_max_value" class="range-value" placeholder="max" />                    
+                </div>
+                <div class="filters-block-part">
+                    <!--<label for="y_scale">Y:</label>-->
+                    <div class="slider-range slider-range-y" name="y_scale"></div>
+                    <input type="number" id="y_min_value" class="range-value" placeholder="min" />
+                    <input type="number" id="y_max_value" class="range-value" placeholder="max" />                    
+                </div>
+            </div>
+
+            <div class="filters-block">
+                <span>Locations</span>
+                <div class="filters-block-part">                    
+                    <select class="select-multiple" name="region" id="region" multiple="multiple" placeholder="Regions">
+                        <option value="Africa">Africa</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Oceania">Oceania</option>
+                        <option value="North America">North America</option>
+                        <option value="Central America">Central America</option>
+                        <option value="North America">North America</option>
+                    </select>
+                </div>
+                <div class="filters-block-part">                    
+                    <select class="select-multiple" name="country" id="country" multiple="multiple" placeholder="Countries">
+                    </select>
+                    <div class="filters-block-part">
+                        <button type="button" id="clear_all">CLEAR ALL</button>
+                        <button type="button" id="select_all">SELECT ALL</button>
+                    </div>                    
+                </div>
+            </div>
+            <div class="filters-block">
+                <span>Actions</span>
+                <div class="filters-block-part">
+                    <button type="button" id="reset">RESET FILTERS</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-md-12 column data">
+            <table id="data-table">
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        scatter();
+        $('#zoomReset').on('click', function (e) {
+            e.preventDefault();
+            $('#chart').empty();
+            scatter();
+        });
+    });
+</script>
+</body>
+</html>

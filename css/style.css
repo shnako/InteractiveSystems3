@@ -4,10 +4,6 @@
     border-right: 0px;
 }
 
-.scatterplot {
-
-}
-
 .filters {
     padding: 0px 0px 10px 0px;
     border: 1px solid #2980b9;
@@ -18,14 +14,23 @@
     display: block;
     background-color:#2980b9;
     color: #fff;
-
-
     border-left: 0px;
     border-right: 0px;
     padding: 10px;
     margin: 5px;
     margin: 0 auto;
     text-transform: uppercase;
+    background-image: url('../img/infoicon.png');
+    background-repeat: no-repeat;
+    padding-left: 18px;  /* width of the image plus a little extra padding */
+    background-position: top 8px right 10px;
+}
+
+.question {
+    display: inline;
+    background-image: url('../img/infoicon.png');
+    background-repeat: no-repeat;
+    padding-left: 18px;  /* width of the image plus a little extra padding */
 }
 
 .filters-block {
@@ -46,6 +51,27 @@
     width:100%;
 }
 
+#clear_all {
+    height: 30px;
+    font-weight: bold;
+    background-color: #c0392b;
+    color: #fff;
+    box-shadow: none;    
+    width: 40%;
+    margin: 10px 0 5px 20px;  
+}
+
+#select_all {
+    height: 30px;
+    font-weight: bold;
+    background-color: #27ae60;
+    color: #fff;
+    box-shadow: none;    
+    width: 40%;
+    margin: 10px 0 5px 20px;    
+
+}
+
 #reset {
     margin: 0 auto;
     width: 100%;
@@ -63,10 +89,15 @@
 }
 
 .slider-range {
-    width: 85%;
+    width: 100%;
+    display: block;
+    margin-right:10px;
+}
 
-    display: inline-block;
-    margin-left:10px;
+.range-value {
+    width: 40%;
+    margin: 10px 0 5px 20px;
+
 }
 
 .data {
@@ -96,3 +127,8 @@
     padding: 3px;
     border: 1px solid #ececec;
 }
+
+.dot {
+    fill: #d35400;
+}
+
