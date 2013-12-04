@@ -1,38 +1,38 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // Refresh scatterplot and populate data
-    $( ".axes" ).on("change", function() {
+    $(".axes").on("change", function () {
         $('#chart').empty();
         $("#x_min_value").val("");
-        $("#x_max_value").val("");        
+        $("#x_max_value").val("");
         $("#y_min_value").val("");
-        $("#y_max_value").val("");        
+        $("#y_max_value").val("");
         scatter();
     });
 
     // Refresh the scatterplot after the country/region filter has been applied
-    $( "#country" ).on("change", function() {
-        $('#chart').empty();     
+    $("#country").on("change", function () {
+        $('#chart').empty();
         scatter();
     });
-    $( "#region" ).on("change", function() {
-        $('#chart').empty();     
+    $("#region").on("change", function () {
+        $('#chart').empty();
         scatter();
     });
 
     // Refresh the scatterplot after the country filter has been applied
-    $( ".range-value" ).on("change", function() {
-        $('#chart').empty();     
+    $(".range-value").on("change", function () {
+        $('#chart').empty();
         scatter();
     });
 
     // Set up range sliders for X and Y axis
     // TODO: Dynamically get "min" and "max" values
-     $( ".slider-range-x" ).slider({
+    $(".slider-range-x").slider({
         range: true,
         min: 0,
         max: 500,
-        values: [ 0,500 ],
-        slide: function( event, ui ) {
+        values: [ 0, 500 ],
+        slide: function (event, ui) {
             $('#chart').empty();
             $("#x_min_value").val(ui.values[0]);
             $("#x_max_value").val(ui.values[1]);
@@ -41,12 +41,12 @@ $(document).ready(function() {
     });
 
     // TODO: Dynamically get "min" and "max" values
-     $( ".slider-range-y" ).slider({
+    $(".slider-range-y").slider({
         range: true,
         min: 0,
         max: 500,
-        values: [ 0,500 ],
-        slide: function( event, ui ) {
+        values: [ 0, 500 ],
+        slide: function (event, ui) {
             $('#chart').empty();
             $("#y_min_value").val(ui.values[0]);
             $("#y_max_value").val(ui.values[1]);
@@ -59,35 +59,35 @@ $(document).ready(function() {
     $("#country").select2();
 
     // TODO: implement reset function
-    $( "#reset").click(function() {
+    $("#reset").click(function () {
         $('#chart').empty();
         $(".range-value").val("");
         $("#region option:selected").removeAttr("selected");
         $("#region").select2();
         $("#country option:selected").removeAttr("selected");
         $("#country").select2();
-        scatter();        
+        scatter();
     });
 
-    $.get( "js/WHO data.csv", function(data) {
+    $.get("js/WHO data.csv", function (data) {
         // Populate dimension dropdowns
         var lines = data.split("\n");
         var headings = lines[0].split(",").sort();
-        for (i in headings)            
-            $(".axes").append("<option value=\""+headings[i]+"\">"+headings[i]+"</option>");            
+        for (i in headings)
+            $(".axes").append("<option value=\"" + headings[i] + "\">" + headings[i] + "</option>");
 
         for (var i = 1; i < lines.length; i++) {
             cols = lines[i].split(",");
-            country = cols[2];            
+            country = cols[2];
             $("#country").append(
-                            $("<option></option>")
-                                .attr("value", country)
-                                .text(country)
-                            ); 
+                $("<option></option>")
+                    .attr("value", country)
+                    .text(country)
+            );
         }
     });
 
-$("#region").on("change", function () {
+    $("#region").on("change", function () {
         var selectedRegions = $(this).val();
         for (index in selectedRegions) {
             for (current in regions) {
@@ -98,17 +98,16 @@ $("#region").on("change", function () {
                                 .attr("value", regions[current][country])
                                 .attr("selected", "selected")
                                 .text(regions[current][country])
-                            );                        
+                        );
                     }
-
                 }
             }
         }
         $("#country").select2();
     });
 
-    
-    $("#country").select2().on("select2-removed", function(e) {
+
+    $("#country").select2().on("select2-removed", function (e) {
         e.preventDefault();
         var countryRemoved = e.val;
         var toDelete = getRegion(countryRemoved);
@@ -120,20 +119,19 @@ $("#region").on("change", function () {
                 newRegions.push(selectedRegions[i]);
         }
 
-
         $("#region").select2("val", newRegions);
 
-    });    
+    });
 
     window.regions = {
-                    "Europe":["Albania", "Andorra", "Armenia", "Austria", "Belarus", "Belgium", "Bosnia and Herzegovina", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Georgia", "Germany", "Greece", "Hungary", "Iceland", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Macedonia", "Malta", "Moldova", "Monaco", "Montenegro", "Netherlands", "Norway", "Poland", "Portugal", "Romania", "Russia", "San Marino", "Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland", "Turkey", "Ukraine", "United Kingdom"],
-                    "Asia":["Afghanistan", "Azerbaijan", "Bangladesh", "Bhutan", "Brunei", "Cambodia", "China", "Timor-Leste", "Egypt", "Georgia", "Hong Kong", "India", "Indonesia", "Iran", "Iraq", "Israel", "Japan", "Jordan", "Kazakhstan", "Kuwait", "Kyrgyzstan", "Laos", "Lebanon", "Malaysia", "Maldives", "Mongolia", "Nepal", "North Korea", "Oman", "Pakistan", "Philippines", "Qatar", "Russia", "Saudi Arabia", "Singapore", "South Korea", "Sri Lanka", "Syria", "Taiwan", "Tajikistan", "Thailand", "Turkey", "Turkmenistan", "United Arab Emirates", "Uzbekistan", "Vietnam", "Yemen"],
-                    "Africa":["Algeria", "Angola", "Bahrain", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cameroon", "Cape Verde", "Central African Republic", "Chad", "Comoros", "Republic of the Congo", "Democratic Republic of Congo", "Djibouti", "Egypt", "Equatorial Guinea", "Eritrea", "Ethiopia", "Gabon", "Gambia", "Ghana", "Guinea", "Guinea", "Kenya", "Lesotho", "Liberia", "Libya", "Madagascar", "Mauritius", "Malawi", "Mali", "Mauritania", "Morocco", "Mozambique", "Namibia", "Niger", "Nigeria", "Paraguay", "Rwanda", "Sao Tome and Principe", "Senegal", "Seychelles", "Sierra Leone", "Somalia", "South Africa", "Sudan", "Swaziland", "Tanzania", "Togo", "Tunisia", "Uganda", "Uruguay", "Zambia", "Zimbabwe"],
-                    "North America":["Canada", "Mexico", "United States of America"],
-                    "Central America":["Costa Rica", "El Salvador", "Guatemala", "Honduras", "Nicaragua", "Panama"],
-                    "South America":["Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", "Guyana", "Peru", "Suriname", "Trinidad and Tobago", "Venezuela"],
-                    "Oceania":["Oceania", "Australia", "Cook Islands", "Fiji", "Indonesia", "Marshall Islands", "Micronesia", "Nauru", "New Zealand", "Palau", "Papua New Guinea", "Samoa", "Solomon Islands", "Tonga", "Tuvalu", "Vanuatu"],
-                    "Carribean":["Antigua and Barbuda", "Bahamas", "Barbados", "Belize", "Bermuda", "Cuba", "Dominica", "Dominican Republic", "Grenada", "Haiti", "Jamaica", "Puerto Rico", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines"]                    
+        "Europe": ["Albania", "Andorra", "Armenia", "Austria", "Belarus", "Belgium", "Bosnia and Herzegovina", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Georgia", "Germany", "Greece", "Hungary", "Iceland", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Macedonia", "Malta", "Moldova", "Monaco", "Montenegro", "Netherlands", "Norway", "Poland", "Portugal", "Romania", "Russia", "San Marino", "Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland", "Turkey", "Ukraine", "United Kingdom"],
+        "Asia": ["Afghanistan", "Azerbaijan", "Bangladesh", "Bhutan", "Brunei", "Cambodia", "China", "Timor-Leste", "Egypt", "Georgia", "Hong Kong", "India", "Indonesia", "Iran", "Iraq", "Israel", "Japan", "Jordan", "Kazakhstan", "Kuwait", "Kyrgyzstan", "Laos", "Lebanon", "Malaysia", "Maldives", "Mongolia", "Nepal", "North Korea", "Oman", "Pakistan", "Philippines", "Qatar", "Russia", "Saudi Arabia", "Singapore", "South Korea", "Sri Lanka", "Syria", "Taiwan", "Tajikistan", "Thailand", "Turkey", "Turkmenistan", "United Arab Emirates", "Uzbekistan", "Vietnam", "Yemen"],
+        "Africa": ["Algeria", "Angola", "Bahrain", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cameroon", "Cape Verde", "Central African Republic", "Chad", "Comoros", "Republic of the Congo", "Democratic Republic of Congo", "Djibouti", "Egypt", "Equatorial Guinea", "Eritrea", "Ethiopia", "Gabon", "Gambia", "Ghana", "Guinea", "Guinea", "Kenya", "Lesotho", "Liberia", "Libya", "Madagascar", "Mauritius", "Malawi", "Mali", "Mauritania", "Morocco", "Mozambique", "Namibia", "Niger", "Nigeria", "Paraguay", "Rwanda", "Sao Tome and Principe", "Senegal", "Seychelles", "Sierra Leone", "Somalia", "South Africa", "Sudan", "Swaziland", "Tanzania", "Togo", "Tunisia", "Uganda", "Uruguay", "Zambia", "Zimbabwe"],
+        "North America": ["Canada", "Mexico", "United States of America"],
+        "Central America": ["Costa Rica", "El Salvador", "Guatemala", "Honduras", "Nicaragua", "Panama"],
+        "South America": ["Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", "Guyana", "Peru", "Suriname", "Trinidad and Tobago", "Venezuela"],
+        "Oceania": ["Oceania", "Australia", "Cook Islands", "Fiji", "Indonesia", "Marshall Islands", "Micronesia", "Nauru", "New Zealand", "Palau", "Papua New Guinea", "Samoa", "Solomon Islands", "Tonga", "Tuvalu", "Vanuatu"],
+        "Carribean": ["Antigua and Barbuda", "Bahamas", "Barbados", "Belize", "Bermuda", "Cuba", "Dominica", "Dominican Republic", "Grenada", "Haiti", "Jamaica", "Puerto Rico", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines"]
     };
 
 });
@@ -146,5 +144,3 @@ function getRegion(countryname) {
         }
     }
 }
-
-

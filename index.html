@@ -18,15 +18,15 @@
     <link href="css/select2.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
-    <script type="text/javascript" src="js/vendor/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="js/vendor/d3.v3.min.js"></script>
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/vendor/d3.v3.min.js"></script>
     <script src="js/underscore.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script type="text/javascript" src="js/vendor/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
-    <script type="text/javascript" src="js/select2.min.js"></script>
+    <script src="js/vendor/jquery-ui.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/select2.min.js"></script>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
 </head>
@@ -40,7 +40,7 @@
     <div class="row clearfix">
         <div class="col-md-9 column someclass scatterplot">
             <div id="chartContainer">
-                <!-- Render the char -->
+                <!-- Render the chart -->
                 <div id="chart"></div>
             </div>
         </div>
@@ -106,25 +106,11 @@
             </div>
 
         </div>
-    </div>
-    <div class="row clearfix">
-        <div class="col-md-12 column data">
-            <table id="data-table">
-                <tbody>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
 </div>
+
 <script>
     $(function () {
         scatter();
-        $('#zoomReset').on('click', function (e) {
-            e.preventDefault();
-            $('#chart').empty();
-            scatter();
-        });
     });
 </script>
 </body>
