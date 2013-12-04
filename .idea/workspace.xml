@@ -25,7 +25,7 @@
             <file leaf-file-name="martynas.html" pinned="false" current="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/martynas.html">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state line="5" column="0" selection-start="269" selection-end="269" vertical-scroll-proportion="0.09529148" vertical-offset="0" max-vertical-offset="2516">
+                  <state line="42" column="38" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.31390134" vertical-offset="434" max-vertical-offset="2431">
                     <folding />
                   </state>
                 </provider>
@@ -42,37 +42,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="2465">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scripts.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/scripts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="6" selection-start="3807" selection-end="3807" vertical-scroll-proportion="0.64746547" vertical-offset="254" max-vertical-offset="1122">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="211" column="0" selection-start="3597" selection-end="3597" vertical-scroll-proportion="0.0" vertical-offset="2499" max-vertical-offset="6494">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="19" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1768">
+            <state line="22" column="0" selection-start="730" selection-end="730" vertical-scroll-proportion="0.43087557" vertical-offset="0" max-vertical-offset="2465">
               <folding />
             </state>
           </provider>
@@ -97,16 +70,16 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/temp.js" />
+        <option value="$PROJECT_DIR$/js/scripts.js" />
+        <option value="$PROJECT_DIR$/martynas.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/martynas.html" />
-        <option value="$PROJECT_DIR$/js/scripts.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-4" />
-    <option name="width" value="1011" />
+    <option name="width" value="1010" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -421,7 +394,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1011" height="1040" extended-state="0" />
+    <frame x="-4" y="0" width="1010" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -429,7 +402,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28542712" sideWeight="0.6703418" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2857143" sideWeight="0.6703418" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -531,35 +504,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="0" selection-start="3597" selection-end="3597" vertical-scroll-proportion="0.0" vertical-offset="2499" max-vertical-offset="6494">
+        <state line="162" column="2" selection-start="2820" selection-end="2820" vertical-scroll-proportion="1.5822928" vertical-offset="1360" max-vertical-offset="5644">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="19" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="2465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/martynas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="269" selection-end="269" vertical-scroll-proportion="0.09529148" vertical-offset="0" max-vertical-offset="2516">
+        <state line="17" column="19" selection-start="232" selection-end="232" vertical-scroll-proportion="0.3280363" vertical-offset="0" max-vertical-offset="1768">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="6" selection-start="3807" selection-end="3807" vertical-scroll-proportion="0.64746547" vertical-offset="254" max-vertical-offset="1122">
+        <state line="27" column="33" selection-start="805" selection-end="805" vertical-scroll-proportion="-0.64631337" vertical-offset="1020" max-vertical-offset="4522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/martynas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="38" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.31390134" vertical-offset="434" max-vertical-offset="2431">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="730" selection-end="730" vertical-scroll-proportion="0.43087557" vertical-offset="0" max-vertical-offset="2465">
           <folding />
         </state>
       </provider>

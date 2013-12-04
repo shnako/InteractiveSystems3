@@ -94,42 +94,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-a {
-    color: #4a5c50;
-    text-decoration: underline;
-}
-
-a:hover,
-a:focus {
-    color: #606043;
-    text-decoration: none;
-}
-
-h4 {
-    margin: 1em 0 0.4em;
-    font-family: 'TradeGothicNextW01-Bold 693232', sans-serif;
-    font-weight: normal;
-    font-size: 24px;
-}
-
-p {
-    margin: 0 0 0.6em;
-}
-
-body {
-    background: #F5F3EF;
-    font-family: 'Trade Gothic Next W01', sans-serif;
-    color: #59595b;
-}
-
-a.major {
-    text-decoration: none;
-}
-
-a.major:hover,
-a.major:focus {
-    color: #9d3d38;
-}
 
 #chartContainer {
     position: relative;
@@ -194,20 +158,6 @@ polygon {
     font-size: 14px;
     fill: rgba(0, 0, 0, 0.5);
     shape-rendering: auto;
-}
-
-#zoom a {
-    background: #fff;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-    border-radius: 40px;
-    height: 20px;
-    width: 20px;
-    line-height: 20px;
-    display: block;
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 5px;
-    text-decoration: none;
 }
 
 /*
