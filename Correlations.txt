@@ -1,0 +1,21 @@
++0.63 : Democracy score | Math achievement 4th grade
++0.74 : Forest area | Number of environment and public health workers
++0.70 : Urban population | GDP2011
++0.86 : Urban population | Total CO2 emissions
++0.86 : Primary completion rate total | Life expectancy at birth
++0.74 : Primary completion rate total | Healthy life expectancy (HALE) at birth
++0.75 : Primary completion rate total | Contraceptive prevalence
++0.75 : Primary completion rate total | Children per woman
+-0.63 : Primary completion rate total | Agriculture contribution to economy
+-0.63 : Primary completion rate total | Adult mortality rate
+
+
+
+
+
+
+
+
+
+
+
