@@ -3,6 +3,15 @@ var scatter = function () {
 
     d3.csv("js/WHO data.csv", function (data) {
 
+        // For calculating correlation
+        var n = 0;
+        var sumx = 0;
+        var sumy = 0;
+        var sumxy = 0;
+        var sumx2 = 0;
+        var sumy2 = 0;
+
+
         // Select the datasets
         var x_data = $("#x_axis").val();
         var y_data = $("#y_axis").val();
@@ -149,9 +158,15 @@ var scatter = function () {
                 var max_y = $("#y_max_value").val();
 
                 // Hide the dot if it does not fall into the range
-                if (!countryOk || x_coord < min_x || x_coord > max_x || y_coord < min_y || y_coord > max_y || isNaN(x_coord) | isNaN(y_coord)) {
-                    return "hidden dot";
-                } else {
+                if (!countryOk || x_coord < min_x || x_coord > max_x || y_coord < min_y || y_coord > max_y || isNaN(x_coord) | isNaN(y_coord)) {                    
+                    return "hidden dot";                    
+                } else {                    
+                    n++;
+                    sumx += x_coord;
+                    sumy += y_coord;
+                    sumx2 += x_coord*x_coord;
+                    sumy2 += y_coord*y_coord;
+                    sumxy += x_coord*y_coord;
                     return "dot";
                 }
             });
@@ -173,6 +188,10 @@ var scatter = function () {
             .attr("dy", ".75em")
             .attr("transform", "rotate(-90)")
             .text(y_data);
+
+        // Calculate and display correlation between X and Y (after filtering)
+        var r = parseFloat((n*sumxy - sumx*sumy)/(Math.sqrt((n*sumx2 - Math.pow(sumx,2))*(n*sumy2 - Math.pow(sumy,2))))).toFixed(2);
+        $("#correlation").text(r);
 
         // Zoom/pan 
         function zoom() {
