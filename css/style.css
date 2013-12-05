@@ -95,6 +95,20 @@ textarea {
 /* ==========================================================================
    Other than scatterplot
    ========================================================================== */
+span a, a:hover{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.heading {
+    background-color: #34495e;
+}
+
+.heading h1 {
+    color: white;
+    margin: 10px 0 10px 10px;
+}
 
 .container {
     background-color: #ececec;
@@ -110,6 +124,7 @@ textarea {
 
 .filters span {
     display: block;
+    cursor: pointer;
     background-color:#2980b9;
     color: #fff;
     border-left: 0px;
@@ -118,18 +133,8 @@ textarea {
     margin: 5px;
     margin: 0 auto;
     text-transform: uppercase;
-    background-image: url('../img/infoicon.png');
-    background-repeat: no-repeat;
-    padding-left: 18px;  /* width of the image plus a little extra padding */
-    background-position: top 8px right 10px;
 }
 
-.question {
-    display: inline;
-    background-image: url('../img/infoicon.png');
-    background-repeat: no-repeat;
-    padding-left: 18px;  /* width of the image plus a little extra padding */
-}
 
 .filters-block {
 

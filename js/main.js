@@ -160,7 +160,8 @@ var scatter = function () {
                 // Hide the dot if it does not fall into the range
                 if (!countryOk || x_coord < min_x || x_coord > max_x || y_coord < min_y || y_coord > max_y || isNaN(x_coord) | isNaN(y_coord)) {                    
                     return "hidden dot";                    
-                } else {                    
+                } else {      
+                    //console.log(x_coord + " " + y_coord)              
                     n++;
                     sumx += x_coord;
                     sumy += y_coord;
@@ -191,7 +192,7 @@ var scatter = function () {
 
         // Calculate and display correlation between X and Y (after filtering)
         var r = parseFloat((n*sumxy - sumx*sumy)/(Math.sqrt((n*sumx2 - Math.pow(sumx,2))*(n*sumy2 - Math.pow(sumy,2))))).toFixed(2);
-        $("#correlation").text(r);
+        $("#correlation").text("Correlation: " + r);
 
         // Zoom/pan 
         function zoom() {

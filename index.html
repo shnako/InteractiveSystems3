@@ -18,12 +18,13 @@
     <link href="css/style.css" rel="stylesheet">
 
     <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/vendor/jquery-ui.min.js"></script>
     <script src="js/vendor/d3.v3.min.js"></script>
     <script src="js/underscore.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/vendor/jquery-ui.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
+    
+    <!--<script src="js/vendor/bootstrap.min.js"></script>-->
     <script src="js/scripts.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -36,6 +37,9 @@
     <![endif]-->
 
 <div class="container">
+    <div class="row clearfix heading">
+        <h1>Datalyzer</h1>
+    </div>
     <div class="row clearfix">
         <div class="col-md-9 column someclass scatterplot">
             <div id="chartContainer">
@@ -45,7 +49,7 @@
         </div>
         <div class="col-md-3 column filters">
             <div class="filters-block">
-                <span>Data</span>
+                <span title="Select two sets of data to be visualised in the chart. The correlation between the two variables is displayed below the dropdowns. The correlation takes into account existing filters.">Data (?)</span>
                 <div class="filters-block-part">
                     <label for="x_axis">X:</label>
                     <select name="x_axis" id="x_axis" class="axes">
@@ -63,7 +67,7 @@
             </div>
 
             <div class="filters-block">
-                <span>Data ranges</span>
+                <span title="Drag slider handles to filter the data. You can insert the values manually into the boxes below the sliders.">Data ranges (?)</span>
                 <div class="filters-block-part">
                     <!--<label for="x_scale">X:</label>-->
                     <div class="slidexr-range slider-range-x" name="x_scale"></div>                    
@@ -79,7 +83,7 @@
             </div>
 
             <div class="filters-block">
-                <span>Locations</span>
+                <span title="Filter the data by selecting regions and countries. CLEAR ALL button clears selected regions and countries. SELECT ALL adds all countries to the list.">Locations (?)</span>
                 <div class="filters-block-part">                    
                     <select class="select-multiple" name="region" id="region" multiple="multiple" placeholder="Regions">
                         <option value="Africa">Africa</option>
@@ -87,7 +91,8 @@
                         <option value="Central America">Central America</option>
                         <option value="Europe">Europe</option>
                         <option value="North America">North America</option>
-                        <option value="Oceania">Oceania</option>                                                
+                        <option value="Oceania">Oceania</option>            
+                        <option value="South America">South America</option>                                    
                     </select>
                 </div>
                 <div class="filters-block-part">                    
@@ -100,7 +105,7 @@
                 </div>
             </div>
             <div class="filters-block">
-                <span>Actions</span>
+                <span title="RESET FILTERS will clear all applied filters.">Actions (?)</span>
                 <div class="filters-block-part">
                     <button type="button" id="reset">RESET FILTERS</button>
                 </div>

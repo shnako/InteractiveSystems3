@@ -21,6 +21,9 @@ $(document).ready(function () {
         scatter();
     });
 
+    // Set up tooltip
+    $( document ).tooltip({show : {delay: 1000}});
+
     // Refresh the scatterplot after the country/region filter has been applied
     $("#country").on("change", function () {
         $('#chart').empty();
